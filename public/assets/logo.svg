@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" role="img" aria-labelledby="title desc">
+  <title id="title">Zaaivanta restaurant logo</title>
+  <desc id="desc">Zaaivanta wordmark with a chef hat, fork, spoon, serving cloche and leaf.</desc>
+  <defs>
+    <linearGradient id="orange" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFB21C"/>
+      <stop offset="1" stop-color="#F15A24"/>
+    </linearGradient>
+    <linearGradient id="brown" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#542015"/>
+      <stop offset="1" stop-color="#28100C"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Chef hat -->
+  <path d="M405 264
+    C365 257 340 226 348 190
+    C355 156 390 137 424 147
+    C439 91 489 58 546 67
+    C602 75 638 116 643 169
+    C681 155 723 177 731 216
+    C739 252 713 282 681 290
+    L681 318 L405 318 Z"
+    fill="none" stroke="url(#orange)" stroke-width="22" stroke-linejoin="round"/>
+  <path d="M480 165 V267 M463 165 V204 Q463 222 480 222 Q497 222 497 204 V165"
+    fill="none" stroke="url(#brown)" stroke-width="13" stroke-linecap="round"/>
+  <path d="M548 165 C527 165 516 183 516 207 V222 Q516 241 533 249 V267"
+    fill="none" stroke="url(#brown)" stroke-width="13" stroke-linecap="round"/>
+  <path d="M430 300 Q546 271 660 300" fill="none" stroke="url(#orange)" stroke-width="13" stroke-linecap="round"/>
+
+  <!-- Serving cloche and steam -->
+  <path d="M777 198 C777 180 791 166 809 166 C827 166 841 180 841 198"
+    fill="none" stroke="url(#orange)" stroke-width="11" stroke-linecap="round"/>
+  <path d="M792 157 C777 135 795 122 807 104 M823 157 C808 133 831 117 841 94"
+    fill="none" stroke="url(#orange)" stroke-width="10" stroke-linecap="round"/>
+  <path d="M754 259 Q809 180 866 259 Z" fill="url(#orange)"/>
+  <path d="M741 263 H879" stroke="url(#brown)" stroke-width="12" stroke-linecap="round"/>
+
+  <!-- Leaf -->
+  <path d="M897 240 C916 193 956 180 990 182 C984 218 956 250 911 253 Z"
+    fill="#78B83D"/>
+  <path d="M906 247 Q941 215 979 190" fill="none" stroke="#315D28" stroke-width="5" stroke-linecap="round"/>
+
+  <!-- Wordmark -->
+  <text x="600" y="438" text-anchor="middle"
+    font-family="Arial, Helvetica, sans-serif" font-size="145" font-weight="800"
+    letter-spacing="-7">
+    <tspan fill="#3A1710">Zaai</tspan><tspan fill="#F47719">vanta</tspan>
+  </text>
+
+  <!-- Plate-like underline -->
+  <path d="M255 478 C390 548 810 548 945 478"
+    fill="none" stroke="url(#orange)" stroke-width="15" stroke-linecap="round"/>
+  <path d="M320 492 C440 526 760 526 880 492"
+    fill="none" stroke="#F9A51A" stroke-width="4" stroke-linecap="round" opacity=".8"/>
+</svg>

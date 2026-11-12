@@ -1,0 +1,57 @@
+import React, { useState } from "react";
+import { navLinks } from "../data/data";
+import { MenuIcon } from "lucide-react";
+
+const Navbar = () => {
+    const [mobileOpen,setMobileOpen]= useState(false);
+  return (
+    <>
+      <nav className="fixed top-0 z-20 px-auto w-full transition-all duration-300 bg-transparent">
+        <div className="flex items-center justify-between font-medium py-4 mx-auto max-w-7xl">
+          <a href="/">
+            <img
+              src="/assets/logo.svg"
+              alt="Logo"
+              width="120"
+              height="70"
+              style={{ objectFit: "contain" }}
+            />
+          </a>
+          {/* Desktop Navigation Links */}
+          <div className="hidden md:flex items-center gap-10">
+            {navLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                className="hover:text-zinc-600"
+              >
+                {link.name}
+              </a>
+            ))}
+          </div>
+          <a
+            href="#booking-process"
+            className="hidden md:block bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full transition"
+          >
+            Book Table
+          </a>
+          <button className="md:hidden bg-[#3A1710] text-white p-2 rounded-md ">
+            <MenuIcon/>
+          </button>
+        </div>
+      </nav>
+      {/* {mobile navigation drawer} */}
+      <div>
+        <div className="flex flex-col items-center space-y-6 font-medium">
+            {navLinks.map((link)=>(
+                <a key = {link.name} href={link.href}>
+                    {link.name}
+                </a>
+            ))}
+        </div>
+      </div>
+    </>
+  );
+};
+
+export default Navbar;
