@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { navLinks } from "../data/data";
-import { MenuIcon } from "lucide-react";
+import { MenuIcon, XIcon } from "lucide-react";
 
 const Navbar = () => {
-    const [mobileOpen,setMobileOpen]= useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
   return (
     <>
       <nav className="fixed top-0 z-20 px-auto w-full transition-all duration-300 bg-transparent">
@@ -35,19 +35,36 @@ const Navbar = () => {
           >
             Book Table
           </a>
-          <button className="md:hidden bg-[#3A1710] text-white p-2 rounded-md ">
-            <MenuIcon/>
+          <button
+            onClick={() => setMobileOpen(true)}
+            className="md:hidden bg-[#3A1710] text-white p-2 rounded-md "
+          >
+            <MenuIcon />
           </button>
         </div>
       </nav>
       {/* {mobile navigation drawer} */}
-      <div>
+      <div
+        className={`flex flex-col items-center justify-center p-8 fixed inset-0 bg-white/70 backdrop-blur-md z-40 transform transition-transform duration-300 ${mobileOpen ? "translate-x-0" : "translate-x-full"}`}
+      >
         <div className="flex flex-col items-center space-y-6 font-medium">
-            {navLinks.map((link)=>(
-                <a key = {link.name} href={link.href}>
-                    {link.name}
-                </a>
-            ))}
+          {navLinks.map((link) => (
+            <a
+              key={link.name}
+              href={link.href}
+              className="text-2xl text-[#3a1710] hover:text-orange-500 transition"
+              onClick={() => setMobileOpen(false)}
+            >
+              {link.name}
+            </a>
+          ))}
+          <button
+            onClick={() => setMobileOpen(false)}
+            className="bg-[#3a1710] text-white p-2 rounded-md aspect-square"
+          >
+            Close
+            <XIcon className="flex flex-col justify-self-center" />
+          </button>
         </div>
       </div>
     </>
